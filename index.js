@@ -64,3 +64,40 @@ const myFilter = function(collection , callback) {
     };
     return finalArray;
 };
+const mySize = function(collection) {
+    let counter = 0;
+    for (let value of Object.values(collection)) {
+        counter = counter + 1;
+    };
+    return counter;
+};
+const myFirst = function(array, integer = null) {
+    if (integer === null) {
+        return array[0];
+    } else {
+        return (array.slice(0, integer));
+    };
+};
+const myLast = function (array, integer = null) {
+    let x = array.length - 1
+    if (integer === null) {
+        return array[x];
+    } else {
+        return (array.slice(-integer))
+    }
+};
+const myKeys = function(object) {
+    let finalArray = [];
+    for (let key in object) {
+        finalArray.push(key);
+    };
+    return finalArray;
+};
+const myValues = function(object) {
+    let finalArray = [];
+    for (let key in object) {
+        let value = object[key]
+        finalArray.push(value)
+    };
+    return finalArray;
+};
